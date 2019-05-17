@@ -1,15 +1,17 @@
 'use strict';
 
+var url = require('url');
+
 module.exports = function (req, res, next) {
   var proto = req.headers['x-forwarded-proto'] || req.protocol;
-  var host = process.env.CANONICAL_HOST;
-  var url = req.url;
+  var chost = process.env.CANONICAL_HOST;
+  var rhost = req.header('host');
 
-  if (!host) { return next(); }
+  if (!chost) { return next(); }
 
-  if (process.env.NODE_ENV != 'production') { return next(); }
+  if (process.env.NODE_ENV !== 'production') { return next(); }
 
-  if (req.headers.host !== host) {
-    return res.redirect(proto+'://'+host+url);
-  }
+  if (chost !== rhost) { return res.redirect(proto+'://'+chost+req.path); }
+
+  next();
 };
