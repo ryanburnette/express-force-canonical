@@ -1,6 +1,6 @@
 {
   "name": "@ryanburnette/express-force-canonical",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Force a canonical host in Express for staging and production environments.",
   "main": "index.js",
   "author": "Ryan Burnette <ryan.burnette@gmail.com>",
