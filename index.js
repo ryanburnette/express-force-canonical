@@ -1,7 +1,5 @@
 'use strict';
 
-var url = require('url');
-
 module.exports = function (req, res, next) {
   var env = process.env.NODE_ENV;
   if (env !== 'production') { return next(); }
