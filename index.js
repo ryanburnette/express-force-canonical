@@ -1,12 +1,21 @@
 'use strict';
 
-module.exports = function (req, res, next) {
-  var env = process.env.NODE_ENV;
-  if (env !== 'production') { return next(); }
-  var proto = req.headers['x-forwarded-proto'] || req.protocol;
-  var chost = process.env.CANONICAL_HOST;
-  if (!chost) { return next(); }
-  var rhost = req.header('host');
-  if (chost !== rhost) { return res.redirect(proto+'://'+chost+req.path); }
-  next();
+module.exports = function(opts) {
+  if (!opts) {
+    throw new Error('opts is required');
+  }
+  if (!opts.chost) {
+    throw new Error('opts.chost is required');
+  }
+  return function(req, res, next) {
+    if (opts.chost !== req.header('host')) {
+      var rproto = req.headers['x-forwarded-proto'] || req.protocol;
+      var proto = opts.proto || rproto;
+      var redirectTo = proto + '://' + opts.chost + req.path;
+      res.statusCode = 301;
+      res.setHeader('Location', redirectTo);
+      return;
+    }
+    next();
+  };
 };
