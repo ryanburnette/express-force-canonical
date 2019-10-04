@@ -14,6 +14,7 @@ module.exports = function(opts) {
       var redirectTo = proto + '://' + opts.chost + req.path;
       res.statusCode = 301;
       res.setHeader('Location', redirectTo);
+      res.end();
       return;
     }
     next();
