@@ -1,4 +1,7 @@
-# @ryanburnette/[express-force-canonical][1]
+# [express-force-canonical](https://github.com/ryanburnette/express-force-canonical)
+
+[![repo](https://img.shields.io/badge/repository-Github-black.svg?style=flat-square)](https://github.com/ryanburnette/express-force-canonical)
+[![npm](https://img.shields.io/badge/package-NPM-green.svg?style=flat-square)](https://www.npmjs.com/package/@ryanburnette/express-force-canonical)
 
 Express or Node.js HTTP middleware to force a canonical host.
 
@@ -6,16 +9,15 @@ Works behind a proxy or on Heroku.
 
 ```js
 var express = require('express');
-var forceCanonicalHost = require('@ryanburnette/force-canonical-host');
 
 var app = express();
 
 if (process.env.NODE_ENV == 'production') {
-  app.use(forceCanonicalHost({
-    chost: 'www.mysite.com', // required
-    proto: 'https' // optional destination proto
-  }));
+  app.use(
+    require('@ryanburnette/force-canonical-host')({
+      chost: 'www.mysite.com', // required
+      proto: 'https' // optional destination proto
+    })
+  );
 }
 ```
-
-[1]: https://code.ryanburnette.com/ryanburnette/express-force-canonical

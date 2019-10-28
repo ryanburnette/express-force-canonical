@@ -1,12 +1,12 @@
 {
   "name": "@ryanburnette/express-force-canonical",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "Express or Node.js HTTP middleware to force a canonical host.",
   "main": "index.js",
   "author": "Ryan Burnette <ryan.burnette@gmail.com>",
   "license": "ISC",
   "repository": {
-    "type" : "git",
-    "url" : "https://code.ryanburnette.com/ryanburnette/express-force-canonical.git"
+    "type": "git",
+    "url": "https://github.com/ryanburnette/express-force-canonical"
   }
 }
