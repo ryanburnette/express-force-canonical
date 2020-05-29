@@ -1,9 +1,9 @@
 {
   "name": "@ryanburnette/express-force-canonical",
-  "version": "3.0.0",
-  "description": "Express.js HTTP middleware to force HTTPS and a canonical host.",
+  "version": "4.0.0",
+  "description": "Express.js middleware to force HTTPS and a canonical host.",
   "main": "index.js",
-  "author": "Ryan Burnette <ryan.burnette@gmail.com>",
+  "author": "Ryan Burnette <ryan.burnette@gmail.com> (https://ryanburnette.com)",
   "license": "ISC",
   "repository": {
     "type": "git",
