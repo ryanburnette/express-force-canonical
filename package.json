@@ -1,6 +1,6 @@
 {
   "name": "@ryanburnette/express-force-canonical",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Express or Node.js HTTP middleware to force a canonical host.",
   "main": "index.js",
   "author": "Ryan Burnette <ryan.burnette@gmail.com>",

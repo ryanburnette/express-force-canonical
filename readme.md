@@ -14,9 +14,9 @@ var app = express();
 
 if (process.env.NODE_ENV == 'production') {
   app.use(
-    require('@ryanburnette/force-canonical-host')({
-      chost: 'www.mysite.com', // required
-      proto: 'https' // optional destination proto
+    require('@ryanburnette/express-force-canonical')({
+      chost: 'www.mysite.com',
+      proto: 'https'
     })
   );
 }
