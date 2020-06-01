@@ -8,15 +8,17 @@ proxy, and on Heroku.
 
 ## Usage
 
-It may not work reliably unless it is the first Middleware declared.
+It may not work reliably unless it is the first Middleware added.
 
 ```js
 if (process.env.NODE_ENV === 'production') {
   var forceCanonical = require('@ryanburnette/express-force-canonical');
   app.use(
     forceCanonical({
-      host: 'www.myawesomewebiste.com', // required host
-      statusCode: 308 // optional statusCode, defaults to 308
+      // host (required)
+      host: 'www.myawesomewebsite.com',
+      // redirect status code (optional, defaults to 308)
+      statusCode: 308
     })
   );
 }
