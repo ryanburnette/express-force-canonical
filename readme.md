@@ -21,3 +21,25 @@ if (process.env.NODE_ENV === 'production') {
   );
 }
 ```
+
+## Installation
+
+<details closed>
+<summary>git via npm</summary>
+<pre><code>npm install ryanburnette/express-force-canonical</code></pre>
+</details>
+
+<details closed>
+<summary>git via yarn</summary>
+<pre><code>yarn add https://github.com/ryanburnette/express-force-canonical.git</code></pre>
+</details>
+
+<details closed>
+<summary>npm</summary>
+<pre><code>npm install @ryanburnette/express-force-canonical</code></pre>
+</details>
+
+<details closed>
+<summary>yarn</summary>
+<pre><code>yarn add @ryanburnette/express-force-canonical</code></pre>
+</details>
