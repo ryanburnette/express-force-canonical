@@ -1,6 +1,6 @@
 {
   "name": "@ryanburnette/express-force-canonical",
-  "version": "4.0.4",
+  "version": "4.0.5",
   "description": "Express.js middleware to force HTTPS and a canonical host.",
   "main": "index.js",
   "author": "Ryan Burnette <ryan.burnette@gmail.com> (https://ryanburnette.com)",
@@ -9,5 +9,12 @@
     "type": "git",
     "url": "https://github.com/ryanburnette/express-force-canonical"
   },
-  "keywords": ["express", "heroku", "force", "https", "canonical", "middleware"]
+  "keywords": [
+    "express",
+    "heroku",
+    "force",
+    "https",
+    "canonical",
+    "middleware"
+  ]
 }
