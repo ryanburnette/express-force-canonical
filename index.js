@@ -13,7 +13,7 @@ module.exports = function (opts = {}) {
       (req.header('X-Forwarded-Proto') || req.protocol) !== 'https' ||
       req.header('Host') !== opts.host
     ) {
-      return res.redirect('https://' + opts.host + req.path, opts.statusCode);
+      return res.redirect(opts.statusCode, 'https://' + opts.host + req.path);
     }
     next();
   };
